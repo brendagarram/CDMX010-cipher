@@ -25,7 +25,7 @@ Se realizó un user persona que permita tener más claro nuestro usuario objetiv
 
 User persona:
 
-![Alt text](user-persona.jpg "User-persona")
+![Alt text](./media-sources/user-persona.jpg "User-persona")
 
 ## 3. Descripción
 
