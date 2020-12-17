@@ -3,20 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesar Cipher</title>
+    <title>Crea tu contraseña</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form action="" method="get">
-        <label for="message">
-            <span>Coloca la frase que quieres transformar en contraseña</span>
-            <input type="text" name= "sentence" id="sentence" placeholder="Escribe tu frase aquí">
-            <span>Dame un número mayor a 0 para poder codificar tu constraseña</span>
-            <input type="text" name= "scroll number" id= "scrollNumber" placeholder= "Coloca un número">
-        </label>
-        <button type= "button" id= "encrypt" onclick= "encryption()">Codificar</button>
-        <button type= "button" id= "moves" onclick= "countSteps()">Contar</button>
-    </form>
-    <div id= "upper"></div>
+    <header>
+            <section class= "nav-info-bank-container">
+                <div class="header-img-container">
+                    <img src="./assets/bank-icon.svg" alt="Logo_banco">
+                </div>
+                <div class ="header-title-container">
+                    <p>Mi banca en línea</p>
+                </div>
+            </section>
+            <nav>
+                <section class= "header-options-container">
+                    <div class = "header-options">
+                        <a href="">Ingresar</a>
+                        <a href=""><img src="./assets/lens-icon-1.svg"alt="ícono de lupa"></a>
+                        <a href="">Menú</a>
+                    </div>
+                </section>
+            </nav>
+    </header>
+    <main>
+        <section id = "main-section" class= "main-info">
+            <div id = "main-section--gralinfo" class= "main-section--gralinfo">
+                <h1>¿Quieres abrir una cuenta en línea?</h1>
+                <h2>En esta sección puedes generar una contraseña segura para tu cuenta</h2>
+                <p>Toda la información que necesitas en un click.</p>
+                <button id = "main-section--button" onclick="goInfoPassword()">Da click aquí</button>
+            </div>
+            <figure id = "main-section-gralInfo--img" class= "main-section-gralInfo--img">
+                <img src="./assets/bank-people.jpg" alt="">
+            </figure>
+            <div id = "main-section-password--info" class= "main-section-password--info">
+                <h1>¿Quieres generar una contraseña segura?</h1>
+                <h2>Si aún no cuentas con una contraseña para tu banca en línea puedes generarla aquí</h2>
+                <p>Sólo necesitas una frase y un número que nos ayudará a generar tu contraseña.</p>
+                <button id= "main-section-password--encode" onclick="goPagEncode()">Generar contraseña</button>
+                <p>Si ya cuentas con una contraseña encriptada y deseas regresar al enunciado inicial, ten a la mano tu número de encriptación y tu contraseña</p>
+                <button id= "main-section-password--decode" onclick = "goPagDecode()">Generar enunciado</button>
+            </div>
+            <figure id = "main-section-password--img" class= "main-section-password--img">
+                <img src="./assets/cel-people.jpg" alt="">
+            </figure>
+            <figure id = "main-section-encode--img" class= "main-section-encode--img">
+                <img src="./assets/password.jpg" alt="">
+            </figure>
+            <div id = "main-section-encode" class= "main-section-encode">
+                <h1>Cifrado</h1>
+                <div class = "main-section-encode--intContainer">
+                    <div>
+                        <p class = "main-section-encode--inst">Para generar tu contraseña necesitas un enunciado sin caracteres especiales (como: #$%) ni espacios, y un número de encriptación que nos ayudará a generar tu contraseña. Puedes generar varias contraseñas con el mismo enunciado, sólo cambiando el número de encriptación. Guarda muy bien esta información para poder desencriptar tu contraseña si así lo deseas.</p>
+                    </div>
+                    <table class="main-section-encode--intrEncode">
+                        <tr>
+                            <td class="main-section-encode--sentence">Coloca la frase que quieres transformar en contraseña</td>
+                        </tr>
+                        <tr>
+                            <td id = "main-section-encode--sentenceInput" class = "main-section-encode--sentenceInput">
+                                <form action="">
+                                    <input type="text" name= "sentence" id="sentence" placeholder="Escribe tu frase aquí">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "main-section-encode--number">Coloca un número mayor a 0 para poder codificar tu contraseña (Este será el número de encriptación)</td>
+                        </tr>
+                        <tr>
+                            <td id = "main-section-encode--numberInput" class = "main-section-encode--numberInput">
+                                <form action="">
+                                    <input type="number" name= "scroll number" id= "scrollNumber" placeholder= "Elige un número">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "main-section-encode--buttonContainer">
+                                <button type= "button" id= "main-section--encodeButton" class = "main-section-encode--button" onclick= "encode()">Codificar</button>
+                            </td>
+                        </tr>
+                        <tr id = "main-section-encode--passwordSection">
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <figure id = "main-section-decode--img" class= "main-section-decode--img">
+                <img src="./assets/password.jpg" alt="">
+            </figure>
+            <section id = "main-section-decode" class= "main-section-decode">
+                <h1>Descifrado</h1>
+                <div class = "main-section-decode--intContainer">
+                    <div class = "main-section-decode--inst">
+                        <p class = "main-section-encode--sentence">Para devolver tu contraseña al enunciado inicial, inserta tu contraseña y el número de encriptación.</p>
+                    </div>
+                    <div class="main-section-decode--intrDecode">
+                        <div >
+                            <p class="main-section-decode--sentence">Coloca la contraseña que quieres descifrar</p>
+                        </div>
+                        <form action="" id = "main-section-decode--sentenceInput" class = "main-section-decode--sentenceInput">
+                            <input type="text" name= "password" id="password" placeholder="Escribe tu contraseña">
+                        </form>
+                        <div class= "main-section-decode--number">
+                            <p>Coloca el número de encriptación que usaste para generar tu contraseña.</p>
+                        </div>
+                        <form action="" id = "main-section-decode--numberInput" class = "main-section-decode--numberInput">
+                            <input type="number" name= "scroll number" id= "encodeNumber" placeholder= "Elige un número">
+                        </form>
+                        <div class = "main-section-decode--buttonContainer">
+                            <button type= "button" id= "main-section--decodeButton" class = "main-section-decode--button" onclick= "decode()">Descifrar</button>
+                        </div>
+                        <div id = "main-section-decode--passwordSection">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class ="footer-gralInfo-container">
+            <div class = "footer-img-container">
+                <img src="./assets/bank-icon.svg" alt="Logo_banco">
+            </div>
+            <div class = "footer-infoBank-container">
+                <p>© 2020 Mi Banca en línea, S. A., <br>
+                Avenida Paseo de los laureles 300, colonia Hidalgo, código postal 035600, <br>
+                alcaldía Iztacíhuatl, Ciudad de México.</p>
+            </div>
+        </div>
+        <div class= "footer-info-social">
+            <a href=""><img src="./assets/facebook-icon.svg" alt="ícono Facebook"></a>
+            <a href=""><img src="./assets/instagram-icon.svg" alt="ícono Instagram"></a>
+            <a href=""><img src="./assets/twitter-icon.svg" alt="ícono Twitter"></a>
+        </div>
+    </footer>
     <script src="index.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Orden de los estilos
+1. Posicionamiento
+2. Modelo de caja (box model: margin, padding, widht, height)
+3. Tipografía
+4. Visuales (shadow-box, border radius)
+5. Otros (miscellaneous)
+*/
+#main-section-password--info, #main-section-password--img, #main-section-encode--img, #main-section-encode, #main-section-decode, #main-section-decode--img {
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: 100px;
+    background-color: #072146;
+}
+
+.header-options-container {
+    display: grid;
+    width: 100%;
+    height: 100px;
+    /*background-color: #68b0ab;*/
+}
+
+.header-options a {
+    display: inline;
+    width: auto;
+    height: 50px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+.header-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.header-options a img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-info-bank-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 80px;
+    width: auto;
+    height: auto;
+    /*background-color: #2a6ead;*/
+}
+
+
+.header-title-container {
+    margin-left: 30px;
+    width: auto;
+}
+
+.header-title-container p {
+    font-size: 3rem;
+    color: white;
+}
+
+.header-img-container {
+    width: auto;
+    height: auto;
+}
+
+.header-img-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-info {
+    height: 707px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-image: linear-gradient(200deg, transparent 35%, white 70%), url('./assets/bank-people.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-section--gralinfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 500px;
+    height: 330px;
+    background-color: #fffff8;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #797272;
+}
+
+.main-section--gralinfo h1, .main-section-password--info h1, .main-section-encode h1, .main-section-decode h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.main-section--gralinfo h2, .main-section-password--info h2 {
+    text-align: center;
+    margin: 5px 5px;
+    padding: 20px 20px;
+    font-size: 2rem;
+}
+
+.main-section--gralinfo p {
+    text-align: center;
+    margin-bottom: 2px;;
+    font-size: 2rem;
+}
+
+.main-section--gralinfo button {
+    position: relative;
+    left: 175px;
+    top: 25px;
+    width: 150px;
+    height: 50px;
+    justify-items: center;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    background-color: #699ff0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #797272;
+}
+
+.main-info figure img {
+    border-radius: 5px;
+}
+
+.main-section-password--info {
+    display: grid;
+    width: 750px;
+    margin-left: 100px;
+    height: 600px;
+    background-color: #fffff8;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #797272;
+}
+
+.main-section-password--info p {
+    width: 700px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 50px;
+    font-size: 1.8rem;
+}
+
+.main-section-password--info button {
+    position: relative;
+    left: 300px;
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    background-color: #699ff0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #797272;
+}
+
+.main-section-encode, .main-section-decode {
+    width: 800px;
+    height: 600px;
+    margin-right: 20px;
+    background-color: #fffff8;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #797272;
+}
+
+.main-section-encode--inst, .main-section-decode--inst {
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    padding: 20px 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(200deg, #a0bfee 16.69%, #c5c8cc 100%);
+    border-radius: 5px;
+}
+
+
+.main-section-encode--intrEncode, .main-section-decode--intrDecode {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    padding: 0px 25px;
+    margin: 10px;
+}
+
+.main-section-encode--sentence, .main-section-encode--number, .main-section-decode--sentence, .main-section-decode--number{
+    width: auto;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.main-section-encode--sentenceInput, .main-section-encode--numberInput, .main-section-decode--sentenceInput, .main-section-decode--numberInput {
+    width: auto;
+    height: 50px;
+    background-color: #c5c8cc48;
+}
+
+.main-section-encode--sentenceInput input, .main-section-encode--numberInput input, .main-section-decode--sentenceInput input, .main-section-decode--numberInput input{
+    width: 250px;
+    height: 30px;
+    border: 0;
+}
+
+.main-section-encode--number, .main-section-decode--number{
+    margin-top: 25px;
+}
+
+.main-section-encode--buttonContainer, .main-section-decode--buttonContainer {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.main-section-encode--buttonContainer button, .main-section-decode--buttonContainer button {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    background-color: #699ff0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #797272;
+}
+
+.main-section-encode--passwordSection, .main-section-decode--passwordSection {
+    margin-top: 10px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100px;
+    background-color: #072146;
+}
+
+.footer-gralInfo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    /*background-color: #a0bfee;*/
+}
+
+.footer-img-container img {
+    justify-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.footer-infoBank-container {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-info-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0px 50px;
+}
+
+.footer-info-social a img {
+    display: inline-block;
+    margin: 25px;
+    height: 25px;
+    width: 25px;
+}
+
+
+
