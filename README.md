@@ -27,7 +27,7 @@ Se realizó un user persona que permitió tener más claro nuestro usuario y des
 
 User persona:
 
-![Alt text](./src-media/user-persona.jpg "User-persona")
+![Alt text](./vmedia/user-persona.jpg "User-persona")
 
 ## 3. Descripción
 
@@ -37,13 +37,13 @@ La funcionalidad de Cipher, basada en cifrado César permite a los usuarios crea
 
 Se realizó un prototipo de baja fidelidad, el cual fue testeado con dos personas que habían manifestado no acceder a la banca en línea por no contar con una contraseña que les pareciera segura. De acuerdo a su interacción con este prototipo y las propuestas manifestadas, se generó un último prototipo que fue testeado nuevamente. El prototipo final fue el siguiente:
 
-![Alt text](./src-media/prototype-lowFidelity.jpg "prototipo-baja-fidelidad")
+![Alt text](./vmedia/prototype-lowFidelity.jpg "prototipo-baja-fidelidad")
 
 Los prototipos realizados permitían la interacción del usuario con la interfaz, ya que se mostraban las instrucciones a realizar y de acuerdo a la interacción, se mostraban las siguientes pantallas o elementos resultados de la interacción. Además, se incentivó al usuario a narrar lo que iba haciendo para saber si las instrucciones eran claras.
 
 ## 5. Resultado de los test unitarios del boilerplate
 
-![Alt text](./src-media/test-cipher.jpg "resultados-test")
+![Alt text](./vmedia/test-cipher.jpg "resultados-test")
 
 
 Este proyecto está basado en el proyecto cipher de Laboratoria y forma parte del bootcamp remoto (Frontend developer), cualquier feedback, será bienvenido :)
